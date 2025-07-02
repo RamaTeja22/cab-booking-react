@@ -8,7 +8,7 @@ function Header() {
     <header className="header">
          <div className="logo">
         <NavLink to="/" className="logo-link">
-          React App
+          Cab App
         </NavLink>
       </div>
       <nav className="nav">
