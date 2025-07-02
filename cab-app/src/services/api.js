@@ -34,3 +34,33 @@ export const registerDriver = async(driverData) => {
         },500)
     })
 }
+
+// src/services/api.js
+
+export const updateDriverLocation = async (driverId, newLocation) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const driver = drivers.find(d => d.id === driverId);
+      if (!driver) {
+        reject(new Error('Driver not found'));
+        return;
+      }
+      driver.location = newLocation;
+      resolve(driver);
+    }, 500);
+  });
+};
+
+export const toggleDriverAvailability = async (driverId) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const driver = drivers.find(d => d.id === driverId);
+      if (!driver) {
+        reject(new Error('Driver not found'));
+        return;
+      }
+      driver.available = !driver.available;
+      resolve(driver);
+    }, 500);
+  });
+};
