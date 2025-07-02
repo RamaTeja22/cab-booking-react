@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Home from './pages/Home';
 import RegisterRiderPage from './pages/RegisterRiderPage';
-import EndRide from './pages/EndRide';
-import History from './pages/History';
 import RegisterDriverPage from './pages/RegisterDriverPage';
 import ToggleAvailibilityPage from './pages/ToggleAvailibilityPage';
 import UpdateLocationPage from './pages/UpdateLocationPage';
 import BookCab from './components/BookCab/BookCab';
+import EndRide from './components/EndRide/EndRide';
+import RideHistory from './components/RideHistory/RideHistory';
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
           <Route path="/toggle-availibility" element={<ToggleAvailibilityPage />} />
            <Route path="/book-cab" element={<BookCab />} />
           <Route path="/end-ride" element={<EndRide />} />
-          <Route path="/fetch-history" element={<History />} />
+          <Route path="/fetch-history/:riderId" element={<RideHistory />} />
         </Routes>
       </div>
     </Router>
