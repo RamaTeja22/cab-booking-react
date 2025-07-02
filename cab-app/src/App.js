@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Home from './pages/Home';
 import RegisterRiderPage from './pages/RegisterRiderPage';
-import BookCab from './pages/BookCab';
 import EndRide from './pages/EndRide';
 import History from './pages/History';
 import RegisterDriverPage from './pages/RegisterDriverPage';
 import ToggleAvailibilityPage from './pages/ToggleAvailibilityPage';
 import UpdateLocationPage from './pages/UpdateLocationPage';
+import BookCab from './components/BookCab/BookCab';
 
 function App() {
   return (
